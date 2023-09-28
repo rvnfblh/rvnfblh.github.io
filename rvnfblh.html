@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <title>SwalGabut</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta  http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+
+  <body style="text-align: center;">
+
+    <div class="div">
+
+    <h1>Testing</h1>
+
+    <i width="200" height="200" src="https://c.tenor.com/gOVnou_T_1gAAAAC/%E0%B8%87%E0%B8%87-%E0%B8%81%E0%B8%AD%E0%B8%94.gif">
+
+    <br>
+
+    <br>
+
+    <button type="button" id="tombol" class="btn">Klik Aku</button>
+
+    </div>
+    
+    <div id="bawah">
+      
+      <h3>Follow My Social Media</h3>
+      
+      <a href="https://www.instagram.com/rvnfblh">
+      <i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@mx_morena23">
+      <i class="fa-brands fa-tiktok"></i></a>
+      
+      
+      
+    </div>
+    
+    <p style="text-align: center;"> &copy REVAN FABILAH <p>
+
+    
+
+    <style>
+
+      .btn {
+
+        background-color: #6495ED;
+
+        border: none;
+
+        color : white;
+
+        border-radius: 0.2em;
+
+        font-size: 24px;
+
+        padding: 16px 32px;
+
+      }
+
+        .div {
+
+          background-color: grey;
+
+          border: 2px solid black;
+
+          color: white;
+
+          border-radius: 0.2em;
+
+          padding: 16px 32px;
+
+        }
+        #bawah {
+          background-color: grey;
+          border: 2px solid black;
+          border-radius: 0.2em;
+          margin: 2px;
+          color: white;
+        }
+        #bawah i {
+          margin: 8px;
+          font-size: 22px;
+          color: white;
+          padding-bottom: 16px;
+        }
+
+    </style>
+
+    <script src="js/sweetalert2.all.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
+
+    <script>
+
+      
+
+    
+
+      const tombol = document.querySelector('#tombol');
+
+      tombol.addEventListener('click', function() {
+
+        Swal.fire({
+
+          title: 'Hi, Namaku Revan',
+
+          text: 'Nama Kamu Siapa?',
+
+          icon: 'question',
+
+          input: 'text',
+
+          showDenyButton: true,
+
+          inputPlaceholder: 'Harus diisi',
+
+          focusConfirm: false
+
+          
+
+        }).then((result) => {
+
+          if (result.isDenied) {
+
+            Swal.fire({
+
+              text: 'Sombong Banget:(',
+
+              icon: 'warning',
+
+              title: 'ihh..'
+
+              })
+
+          } else if (result.value) {
+
+            Swal.fire({
+
+              title: 'Hallo, ' + result.value,
+
+              icon: 'succes',
+
+              html:
+
+              'Follow Ig ku dong, ' +
+
+              '<a href="https://www.instagram.com/rvnfblh">@rvnfblha</a>'
+
+            })
+
+          } else if (result.isDismissed) {
+
+            Swal.fire({
+
+              text: 'Sombong Banget:(',
+
+              icon: 'warning',
+
+              title: 'ihh..'
+
+            })
+
+            }
+
+          }
+
+          
+
+        )
+
+      });
+
+      
+
+    </script>
+
+  </body>
+
+</html>
